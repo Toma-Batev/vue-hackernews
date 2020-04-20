@@ -1,10 +1,11 @@
+import { shallowMount } from '@vue/test-utils'
 import Item from '../Item.vue'
-import Vue from 'vue'
 
 describe('Item.vue', () => {
   test('renders "item"', () => {
-    const Ctor = Vue.extend(Item)
-    const vm = new Ctor().$mount()
-    expect(vm.$el.textContent).toContain('item')
+    const wrapper = shallowMount(Item)
+    // eslint-disable-next-line
+                                 debugger;
+    expect(wrapper.text()).toContain('item')
   })
 })
